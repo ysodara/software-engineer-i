@@ -1,0 +1,46 @@
+﻿@model IEnumerable<HW8.Models.Athlete>
+
+<h2>Search Student</h2>
+<div id="student">
+    <form>
+        <input id="request" name="request" type="button" value="Show All" />
+    </form>
+</div>
+<br />
+<ol id="resultAll"></ol>
+    <div id="result"></div>
+
+        <table class="table" style="width:100%">
+            <tr id="header">
+            </tr>
+        </table>
+    
+    @section scripts
+{
+        <script src="~/Scripts/main.js"></script>
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    }
+    @*<div id="athletName">
+        <table class="table">
+            <tr>
+
+                <th>
+                    Athlete Name
+                </th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+
+                        <input id="request" name="request" type="button" value="@item.Name" />
+                    </td>
+
+                </tr>
+            }
+
+        </table>
+            </div>*@

@@ -1,0 +1,164 @@
+﻿@model HW6.Models.ViewModels.ItemDetailsViewModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>World Wide Importers</h2>
+
+<div class="Stock">
+    <div class="container">
+        <div class="row">
+            <div class="col col-lg-8">
+                <h4>Stock Items</h4>
+                
+                <dl class="dl-horizontal">
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.ItemName)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.ItemName)
+                    </dd>
+
+                    @if (Model.ItemSize != null)
+                    {
+                        <dt>
+                            @Html.DisplayNameFor(model => model.ItemSize)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.ItemSize)
+                        </dd>
+                    }
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.RecRetailPrice)
+                    </dt>
+
+                    <dd>
+                        $@Html.DisplayFor(model => model.RecRetailPrice)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.WeightPerUnit)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.WeightPerUnit)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.ItemLeadTime)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.ItemLeadTime) days
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.ValidSince)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.ValidSince)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Origin)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Origin)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.ItemTags)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.ItemTags)
+                    </dd>
+                </dl>
+            </div>
+            <div class="col col-lg-3">
+                <img src="https://icon-library.net/images/null-icon/null-icon-10.jpg" alt="@Model.ItemPhoto">
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="Sale">
+                <h4>Supplier Profile</h4>
+                
+                <dl class="dl-horizontal">
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Company)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Company)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Phone)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Phone)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Fax)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Fax)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Web)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Web)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.ContactName)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.ContactName)
+                    </dd>
+                </dl>
+            </div>
+            <div class="Sum">
+                <h4>Sale Summary</h4>
+               
+                <dl class="dl-horizontal">
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Orders)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Orders)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.GrossSale)
+                    </dt>
+
+                    <dd>
+                        $@Html.DisplayFor(model => model.GrossSale)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.GrossProfit)
+                    </dt>
+
+                    <dd>
+                        $@Html.DisplayFor(model => model.GrossProfit)
+                    </dd>
+                </dl>
+            </div>

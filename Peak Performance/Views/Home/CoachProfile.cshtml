@@ -1,0 +1,52 @@
+﻿@model Peak_Performance.Models.CoachProfileViewModel
+
+@{
+    ViewBag.Title = "CoachProfile";
+}
+<div>
+    <h4>My Athletes</h4>
+    <p>
+        @Html.ActionLink("Add New Athlete", "Create", "Athletes")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                Team
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Preferred Name
+            </th>
+            <th>
+                Active
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model.athletes) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Team.TeamName)
+            </td>
+            <td>
+
+                @Html.ActionLink(@Html.DisplayFor(modelItem => item.FirstName) + " " + @Html.DisplayFor(modelItem => item.LastName), "Details", "Athletes", new { id=item.AthleteId },null)
+                
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PreferredName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Active)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", "Athletes", new { id=item.AthleteId },null) |
+                @Html.ActionLink("Delete", "Delete", "Athletes", new { id=item.AthleteId },null)
+            </td>
+        </tr>
+}
+
+    </table>
+</div>

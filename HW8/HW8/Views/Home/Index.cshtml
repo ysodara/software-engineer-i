@@ -1,0 +1,98 @@
+﻿@model IEnumerable<HW8.Models.Athlete>
+
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+
+@*<h1>
+    @Html.ActionLink("Add New Athlete", "AddAthlete", "Home")
+</h1>
+<h1>
+    @Html.ActionLink("Add New Location for next meets", "AddLocation", "Home")
+</h1>
+<h1>
+    @Html.ActionLink("Add New Race record for a athlete", "AddRaceTime", "Home")
+</h1>*@
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Create Athlete</h2>
+        <p>
+            Add new athlete to a existing team
+        </p>
+        <p><a class="btn btn-default" href="Home/AddAthlete">Go &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Create Location</h2>
+        <p>Add new Location for the next meet</p>
+        <p><a class="btn btn-default" href="Home/AddLocation">Go &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Add Record</h2>
+        <p>Add new race time for athlete</p>
+        <p><a class="btn btn-default" href="Home/AddRaceTime">Go &raquo;</a></p>
+    </div>
+
+</div>
+@*<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Team.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Gender)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Team.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gender)
+            </td>
+            <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                </td>
+        </tr>
+    }
+
+</table>*@
+<div class="row">
+    <div class="col-md-12">
+        <h2>View One Athlete</h2>
+        <p>
+            Search Athlete by name
+        </p>
+        <p><a class="btn btn-default" href="Home/ShowAthletes">Go &raquo;</a></p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <h2>Show Student Graph</h2>
+        <p>
+            Select a team to view Athlete, select athlete name to show race distance you want to view.
+        </p>
+        <p><a class="btn btn-default" href="Home/StudentStat">Go &raquo;</a></p>
+    </div>
+    </div>
+    
+    @section scripts
+{
+        <script src="~/Scripts/main.js"></script>
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    }

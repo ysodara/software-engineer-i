@@ -1,0 +1,52 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <div class="row">
+        <div class="col-md-4">
+            <img id="profilePic" alt="Profile Pictures">
+        </div>
+        <div class="col-md-6">
+            <a id="nameLink"><h1 id="fullName"></h1></a>
+            <div id="userName"></div>
+            <div id="email"></div>
+            <div id="school"></div>
+            <div id="schoolLocation"></div>
+        </div>
+
+
+    </div>
+</div>
+
+<div class="jumbotron">
+    <ol id="thePlot">
+    </ol>
+
+
+
+
+</div>
+
+
+<div id="commitsDiv">
+
+    <table class="table" style="width:100%">
+        <tr id="header">
+        </tr>
+    </table>
+
+
+
+
+</div>
+
+
+
+@section scripts
+{
+    <script src="~/Scripts/main.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <link href="@Url.Content("~/Content/Styles.css")" rel="stylesheet" type="text/css" />
+}
+

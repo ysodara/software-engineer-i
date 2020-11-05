@@ -1,0 +1,106 @@
+﻿/*
+    HERE ARE THE BACKGROUND-COLORS TO CHOOSE FROM WHEN COLORING CERTAIN OBJECTS:
+    -> background-color: tan #e8d1a8 (Last choice color)
+    -> background-color: brown #b7afa4
+    -> background-color: seafoam green #c1dad6
+    -> background-color: light blue #add1e9
+    -> background-color: logo blue #255aa2 (darker) and #3f7fbc (lighter)
+    -> background-color: darker blue #6d929b
+    -> background-color: grey #C0C0C0
+    -> background-color: white #FFFFFF
+    -> background-color: black #000000
+
+    HERE IS THE FONT WE HAVE CHOSEN TO USE:
+    -> font-family: "Times New Roman", Times, serif;
+
+    TO EMPHANSIZE TEXT, USE THE FOLLOWING CSS:
+    -> font-variant-caps: small-caps;
+
+    **IF THE BACKGROUND COLOR IS DARK, PLEASE USE #FFFFFF FOR THE FONT COLOR**
+    -> color: #FFFFFF
+
+    **IF THE BACKGROUND COLOR IS LIGHT, PLEASE USE #000000 FOR THE FONT COLOR**
+    -> color: #000000
+
+    HOVERING CSS CODE:
+    ->  #idOfTag:hover {
+            background-color: #255aa2;
+        }
+
+    **HOVERING FOR INPUT OF TYPE BUTTON SHOULD BE THE SAME AS BUTTON TAGS**
+*/
+
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists
+   will truncate terms that are too long to fit in the left column
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.navbar-inverse {
+    background-color: #C0C0C0;
+}
+
+    .navbar-inverse .navbar-nav > li > a {
+        color: black;
+    }
+
+        .navbar-inverse .navbar-nav > li > a:hover {
+            background-color: #3f7fbc;
+            border-radius: 8px;
+        }
+
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
+}
+
+#companyLogo {
+    width: 300px;
+}
+
+/*FOR TITLES, THEY HAVE THESE CHARACTERISTICS. ADD VIA ID TAGS FOR EXTRA CHARACTERISTICS*/
+/*h1, h2, h3, h4, h5, h6 {
+    font-family: "Times New Roman", Times, serif;
+    text-align: center;
+}*/
+
+/*-------------------------------------------------------------*/
+/*DEFAULT BUTTON STYLE. PLEASE ADD COLORING AND SUCH IN ID TAGS*/
+/*-------------------------------------------------------------*/
+button {
+    border-radius: 5px;
+}
+
+    button:hover {
+        background-color: #3f7fbc;
+        border-radius: 8px;
+    }
+
+input[type=button], input[type=submit], input[type=reset] {
+    border-radius: 5px;
+}
+
+    input[type=button], input[type=submit], input[type=reset]:hover {
+        background-color: #3f7fbc;
+        border-radius: 8px;
+    }
+/*-------------------------------------------------------------*/

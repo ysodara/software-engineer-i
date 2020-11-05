@@ -1,0 +1,16 @@
+body{
+    background-color: antiquewhite;
+}
+
+h1{
+    text-align: center;
+    padding-bottom: 30px;
+}
+div {
+    padding: 15px;
+    padding-bottom: 30px;
+}
+
+table{
+    border-color: black;
+}

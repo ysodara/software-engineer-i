@@ -1,0 +1,62 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Interpolate from one color to another</h2>
+
+<p> Please Enter colors in HTML hexadecimal format:#AABBCC</p>
+
+
+
+
+<div class="row">
+    <div class="col-md-6">
+        @using (Html.BeginForm("Create", "ColorInterpolator", FormMethod.Post))
+        {
+            <table BackColor="yellow">
+                <tr>
+                    <td>First Color: </td>
+                    <td>@Html.TextBox("FirstNum", null, new { @Class = "form-control", type = "text" , required= "required" , pattern="[#][A-Za-z0-9]+",maxlength="9"})</td>
+                </tr>
+                <tr>
+                    <td>Second Color: </td>
+                    <td>@Html.TextBox("SecondNum", null, new { @Class = "form-control", type = "text" , required= "required", pattern="[#][A-Za-z0-9]+",maxlength="9"})</td>
+                </tr>
+                <tr>
+                    <td>Number of Colors: </td>
+                    <td>
+                        @Html.TextBox("NumColors", null, new { @Class = "form-control", type = "number", required= "required", min="0" })
+                        
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="submit" value="Generate Colors"></td>
+                </tr>
+            </table>
+        }
+    </div>
+
+    <div class="col-md-6">
+        @if (ViewBag.Success == true)
+        {
+        <table class="table table-bordered table-striped">
+        <tr><th>ColorHex: </th>
+            <th>Color: </th>
+        </tr>
+
+       @foreach (var color in (IEnumerable<HW4.Controllers.ColorInterpolatorController.ColorStrut>)ViewBag.ColorLists)
+       {
+            <tr><td>@color.htmlColor</td>
+                <td style="background: @color.htmlColor"></td>
+            </tr>
+
+       }
+
+        </table>
+        }
+    </div>
+ </div>
+
+
+

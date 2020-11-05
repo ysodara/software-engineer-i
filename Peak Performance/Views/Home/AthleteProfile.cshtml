@@ -1,0 +1,75 @@
+﻿@model Peak_Performance.Models.Athlete
+
+@{
+    ViewBag.Title = "Your Profile";
+}
+
+<div class="container-fluid">
+    <div class="jumbotron">
+
+
+
+        <div class="row">
+           
+            <div class="col-md-12">
+                <div>
+                    <dl class="dl-horizontal">
+
+
+                        <dt>
+                            Name
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.FirstName) @Html.DisplayFor(model => model.LastName)
+                        </dd>
+
+                        <dt>
+                            Your Team
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Team.TeamName)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Gender)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Gender)
+                        </dd>
+
+                        <dt>
+                            Age
+                        </dt>
+
+                        <dd>
+                            @ViewBag.Age
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Height)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Height)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Weight)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Weight)
+                        </dd>
+
+                    </dl>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    
+</div>
+
